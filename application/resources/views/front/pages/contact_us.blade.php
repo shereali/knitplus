@@ -1,0 +1,23 @@
+@extends('front.pages.app')
+@section('body')
+<div class="container" style="background: #0A233B;color:#fff;">
+	<div class="row">
+		<div class="col-md-9 col-md-offset-2">
+			
+			<div style="border-bottom: 2px solid #fff;" id="">
+				<h1 class="custom-font"><span class="fa fa-product"></span> Contact Us</h1>
+			</div>
+			<div class="">
+				@foreach ($products as $product)
+					<img src="{{ url(imagePath().'division/'.$product->divisionImg) }}" alt="">
+					<article>
+						{!! $product->description !!}
+					</article>
+				@endforeach
+				
+			</div>
+			<br><br>
+		</div>	
+	</div>
+</div>
+@endsection
